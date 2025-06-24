@@ -17,7 +17,6 @@
       min-height: 100vh;
       overflow: hidden;
     }
-
     .love-message {
       font-size: 3rem;
       color: #333;
@@ -27,33 +26,30 @@
       font-weight: bold;
       letter-spacing: 2px;
     }
-
     @keyframes glow {
       from { text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.3); }
       to { text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.6); }
     }
-
     .pixel-character {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-
     .pixel-head {
       width: 80px;
       height: 80px;
       overflow: hidden;
-      box-shadow: none; /* no shadow */
-      border: none; /* no border */
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
     }
-
     .face-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 0;
     }
-
     .pixel-body {
       width: 60px;
       height: 100px;
@@ -63,7 +59,6 @@
       border: 3px solid #111;
       box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
-
     .pixel-arms {
       position: absolute;
       top: 60px;
@@ -73,7 +68,6 @@
       left: 50%;
       transform: translateX(-50%);
     }
-
     .arm {
       width: 15px;
       height: 70px;
@@ -84,31 +78,25 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       position: relative;
     }
-
     .left-arm {
       animation: hugLeft 2s ease-in-out infinite;
     }
-
     .right-arm {
       animation: hugRight 2s ease-in-out infinite;
     }
-
     @keyframes hugLeft {
       0%, 100% { transform: rotate(-55deg); }
       50% { transform: rotate(-10deg); }
     }
-
     @keyframes hugRight {
       0%, 100% { transform: rotate(55deg); }
       50% { transform: rotate(10deg); }
     }
-
     .pixel-legs {
       display: flex;
       gap: 10px;
       margin-top: -5px;
     }
-
     .leg {
       width: 18px;
       height: 60px;
@@ -117,7 +105,6 @@
       border: 2px solid #111;
       box-shadow: 0 0 8px rgba(0,0,0,0.3);
     }
-
     .hearts {
       position: absolute;
       width: 100%;
@@ -125,7 +112,6 @@
       pointer-events: none;
       overflow: hidden;
     }
-
     .heart {
       position: absolute;
       color: #ff69b4;
@@ -133,7 +119,6 @@
       animation: floatHeart 3s ease-in-out infinite;
       opacity: 0;
     }
-
     @keyframes floatHeart {
       0% {
         opacity: 0;
@@ -150,7 +135,6 @@
         transform: translateY(-100px) scale(1.2);
       }
     }
-
     .subtitle {
       color: #333;
       font-size: 1.2rem;
@@ -159,12 +143,10 @@
       opacity: 0.9;
       animation: fadeInOut 3s ease-in-out infinite;
     }
-
     @keyframes fadeInOut {
       0%, 100% { opacity: 0.7; }
       50% { opacity: 1; }
     }
-
     @media (max-width: 768px) {
       .love-message {
         font-size: 2rem;
