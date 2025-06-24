@@ -37,21 +37,22 @@
       align-items: center;
     }
     .pixel-head {
-      width: 80px;
-      height: 80px;
+      width: 100px; /* Increased size */
+      height: 100px; /* Increased size */
+      border-radius: 0; /* Removed circular border */
       overflow: hidden;
-      box-shadow: none;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      z-index: 10;
       border: none;
-      border-radius: 0;
     }
     .face-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 0;
+      border-radius: 0; /* Ensure no circular border */
     }
     .pixel-body {
-      width: 60px;
+      width: 30px;
       height: 100px;
       background: #222;
       border-radius: 6px;
@@ -61,15 +62,15 @@
     }
     .pixel-arms {
       position: absolute;
-      top: 60px;
+      top: 80px; /* Adjusted to match new head size */
       display: flex;
       justify-content: space-between;
-      width: 85px;
+      width: 45px;
       left: 50%;
       transform: translateX(-50%);
     }
     .arm {
-      width: 15px;
+      width: 10px;
       height: 70px;
       background: #222;
       border-radius: 8px;
@@ -85,12 +86,12 @@
       animation: hugRight 2s ease-in-out infinite;
     }
     @keyframes hugLeft {
-      0%, 100% { transform: rotate(-55deg); }
-      50% { transform: rotate(-10deg); }
+      0%, 100% { transform: rotate(-65deg); }
+      50% { transform: rotate(-20deg); }
     }
     @keyframes hugRight {
-      0%, 100% { transform: rotate(55deg); }
-      50% { transform: rotate(10deg); }
+      0%, 100% { transform: rotate(65deg); }
+      50% { transform: rotate(20deg); }
     }
     .pixel-legs {
       display: flex;
@@ -98,7 +99,7 @@
       margin-top: -5px;
     }
     .leg {
-      width: 18px;
+      width: 9px;
       height: 60px;
       background: #222;
       border-radius: 4px;
@@ -152,8 +153,8 @@
         font-size: 2rem;
       }
       .pixel-head {
-        width: 60px;
-        height: 60px;
+        width: 80px; /* Adjusted size for smaller screens */
+        height: 80px; /* Adjusted size for smaller screens */
       }
       .pixel-body {
         width: 45px;
@@ -161,7 +162,7 @@
       }
       .pixel-arms {
         width: 70px;
-        top: 45px;
+        top: 65px; /* Adjusted to match new head size */
       }
       .arm {
         width: 12px;
