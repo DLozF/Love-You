@@ -2,9 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>I Love You</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #111;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .pixelman {
+      position: relative;
+      width: 50px;
+      height: 120px;
+      margin: 50px auto;
+    }
+
+    .head img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .body {
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      width: 10px;
+      height: 40px;
+      background: white;
+    }
+
+    .arm {
+      position: absolute;
+      top: 50px;
+      width: 30px;
+      height: 6px;
+      background: white;
+      transform-origin: left center;
+    }
+
+    .arm.left {
+      left: -30px;
+      animation: hug-left 2s infinite alternate;
+    }
+
+    .arm.right {
+      left: 20px;
+      animation: hug-right 2s infinite alternate;
+    }
+
+    .legs {
+      position: absolute;
+      top: 90px;
+      left: 20px;
+      width: 10px;
+      height: 30px;
+      background: white;
+    }
+
+    @keyframes hug-left {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(40deg); }
+    }
+
+    @keyframes hug-right {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-40deg); }
+    }
+  </style>
 </head>
 <body>
   <h1>I love you ❤️</h1>
