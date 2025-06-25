@@ -1,421 +1,52 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Te Amo Muchisimo</title>
-
-  <style>
-
-    body {
-
-      margin: 0;
-
-      padding: 0;
-
-      background: #ffe8e1;
-
-      font-family: 'Arial', sans-serif;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-      align-items: center;
-
-      min-height: 100vh;
-
-      overflow: hidden;
-
-    }
-
-    .love-message {
-
-      font-size: 3rem;
-
-      color: #333;
-
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-
-      margin-bottom: 2rem;
-
-      animation: glow 2s ease-in-out infinite alternate;
-
-      font-weight: bold;
-
-      letter-spacing: 2px;
-
-    }
-
-    @keyframes glow {
-
-      from {
-
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.3);
-
-      }
-
-      to {
-
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.6);
-
-      }
-
-    }
-
-    .pixel-character {
-
-      position: relative;
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-    }
-
-    .pixel-head {
-
-      width: 200px;
-
-      height: 200px;
-
-      border-radius: 50%;
-
-      overflow: hidden;
-
-      box-shadow: none;
-
-      border: none;
-
-    }
-
-    .face-image {
-
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
-
-      border-radius: 50%;
-
-    }
-
-    .pixel-body {
-
-      width: 20px;
-
-      height: 100px;
-
-      background: #222;
-
-      border-radius: 6px;
-
-      margin-top: -10px;
-
-      border: 3px solid #111;
-
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-
-    }
-
-    .pixel-arms {
-
-      position: absolute;
-
-      top: 70px;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      width: 55px;
-
-      left: 50%;
-
-      transform: translateX(-50%);
-
-    }
-
-    .arm {
-
-      width: 10px;
-
-      height: 70px;
-
-      background: #222;
-
-      border-radius: 8px;
-
-      border: 2px solid #111;
-
-      transform-origin: bottom center;
-
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-      position: relative;
-
-    }
-
-    .left-arm {
-
-      animation: hugLeft 2s ease-in-out infinite;
-
-    }
-
-    .right-arm {
-
-      animation: hugRight 2s ease-in-out infinite;
-
-    }
-
-    @keyframes hugLeft {
-
-      0%, 100% { transform: rotate(-65deg); }
-
-      50% { transform: rotate(-20deg); }
-
-    }
-
-    @keyframes hugRight {
-
-      0%, 100% { transform: rotate(65deg); }
-
-      50% { transform: rotate(20deg); }
-
-    }
-
-    .pixel-legs {
-
-      display: flex;
-
-      gap: 10px;
-
-      margin-top: -5px;
-
-    }
-
-    .leg {
-
-      width: 9px;
-
-      height: 60px;
-
-      background: #222;
-
-      border-radius: 4px;
-
-      border: 2px solid #111;
-
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-
-    }
-
-    .hearts {
-
-      position: absolute;
-
-      width: 100%;
-
-      height: 100%;
-
-      pointer-events: none;
-
-      overflow: hidden;
-
-    }
-
-    .heart {
-
-      position: absolute;
-
-      color: #ff69b4;
-
-      font-size: 1.5rem;
-
-      animation: floatHeart 3s ease-in-out infinite;
-
-      opacity: 0;
-
-    }
-
-    @keyframes floatHeart {
-
-      0% {
-
-        opacity: 0;
-
-        transform: translateY(100vh) scale(0.5);
-
-      }
-
-      10% {
-
-        opacity: 1;
-
-      }
-
-      90% {
-
-        opacity: 1;
-
-      }
-
-      100% {
-
-        opacity: 0;
-
-        transform: translateY(-100px) scale(1.2);
-
-      }
-
-    }
-
-    .subtitle {
-
-      color: #333;
-
-      font-size: 1.2rem;
-
-      margin-top: 2rem;
-
-      text-align: center;
-
-      opacity: 0.9;
-
-      animation: fadeInOut 3s ease-in-out infinite;
-
-    }
-
-    @keyframes fadeInOut {
-
-      0%, 100% { opacity: 0.7; }
-
-      50% { opacity: 1; }
-
-    }
-
-    @media (max-width: 768px) {
-
-      .love-message {
-
-        font-size: 2rem;
-
-      }
-
-      .pixel-head {
-
-        width: 90px;
-
-        height: 90px;
-
-      }
-
-      .pixel-body {
-
-        width: 30px;
-
-        height: 75px;
-
-      }
-
-      .pixel-arms {
-
-        width: 50px;
-
-        top: 55px;
-
-      }
-
-      .arm {
-
-        width: 12px;
-
-        height: 60px;
-
-      }
-
-    }
-
-  </style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
   <div class="hearts" id="hearts"></div>
 
   <div class="love-message">Te amo Muchisimo ❤️</div>
 
   <div class="pixel-character">
-
     <div class="pixel-head">
-
       <img src="your_face.png" alt="Your face" class="face-image" id="faceImage">
-
     </div>
 
     <div class="pixel-arms">
-
       <div class="arm left-arm"></div>
-
       <div class="arm right-arm"></div>
-
     </div>
 
     <div class="pixel-body"></div>
 
     <div class="pixel-legs">
-
       <div class="leg"></div>
-
       <div class="leg"></div>
-
     </div>
-
   </div>
 
   <div class="subtitle">Te amo Te amo Te amo Te amo y TE AMO Andrea</div>
 
   <script>
-
+    // Create floating hearts
     function createHeart() {
-
       const heart = document.createElement('div');
-
       heart.className = 'heart';
-
       heart.innerHTML = '❤️';
-
       heart.style.left = Math.random() * 100 + '%';
-
       heart.style.animationDelay = Math.random() * 2 + 's';
-
       heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
-
       document.getElementById('hearts').appendChild(heart);
-
       setTimeout(() => {
-
         heart.remove();
-
       }, 5000);
-
     }
-
+    // Create hearts periodically
     setInterval(createHeart, 1000);
-
   </script>
-
 </body>
-
 </html>
