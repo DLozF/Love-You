@@ -175,3 +175,26 @@ body {
     height: 60px;
   }
 }
+#splash-screen {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: #ffe8e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-mark {
+  font-size: 8rem;
+  color: #ff69b4;
+  animation: tilt 1.2s infinite alternate ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+@keyframes tilt {
+  0% { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+  100% { transform: rotate(-15deg); }
+}

@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="splash-screen">
+  <span class="question-mark">?</span>
+</div>
+<div id="main-content" style="display:none;">
 <div class="hearts" id="hearts"></div>
 <div class="love-message">Te amo Muchisimo <span class="pumping-heart">❤️</span></div>
 <div class="pixel-character">
@@ -24,6 +28,7 @@
   </div>
 </div>
 <div class="subtitle">Te amo Te amo Te amo Te amo y TE AMO Andrea</div>
+</div>
 <script>
 function createHeart() {
   const heart = document.createElement('div');
@@ -38,6 +43,11 @@ function createHeart() {
   }, 5000);
 }
 setInterval(createHeart, 1000);
+
+document.querySelector('.question-mark').onclick = function() {
+  document.getElementById('splash-screen').style.display = 'none';
+  document.getElementById('main-content').style.display = '';
+};
 </script>
 </body>
 </html>
