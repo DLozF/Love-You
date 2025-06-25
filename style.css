@@ -66,8 +66,8 @@ body {
   transform: translateX(-50%);
 }
 .arm {
-  width: 6px;
-  height: 80px;
+  width: 6px;   /* thinner */
+  height: 100px; /* longer */
   background: #222;
   border-radius: 8px;
   border: 2px solid #111;
