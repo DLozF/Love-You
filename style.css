@@ -50,10 +50,10 @@ body {
 .pixel-body {
   width: 20px;
   height: 100px;
-  background: #222;
+  background: #444343;
   border-radius: 6px;
   margin-top: -10px;
-  border: 3px solid #111;
+  border: none;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 .pixel-arms {
@@ -68,9 +68,9 @@ body {
 .arm {
   width: 6px;   /* thinner */
   height: 100px; /* longer */
-  background: #222;
+  background: #444343;
   border-radius: 8px;
-  border: 2px solid #111;
+  border: none;
   transform-origin: bottom center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -97,9 +97,9 @@ body {
 .leg {
   width: 9px;
   height: 60px;
-  background: #222;
+  background: #444343;
   border-radius: 4px;
-  border: 2px solid #111;
+  border: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 .hearts {
@@ -144,6 +144,20 @@ body {
   0%, 100% { opacity: 0.7; }
   50% { opacity: 1; }
 }
+.pumping-heart {
+  display: inline-block;
+  animation: pump 0.8s infinite;
+  transform-origin: center;
+}
+
+@keyframes pump {
+  0%, 100% { transform: scale(1); }
+  20% { transform: scale(1.2); }
+  40% { transform: scale(0.95); }
+  60% { transform: scale(1.15); }
+  80% { transform: scale(1); }
+}
+
 @media (max-width: 768px) {
   .love-message {
     font-size: 2rem;
