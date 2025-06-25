@@ -2,51 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Te Amo Muchisimo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="hearts" id="hearts"></div>
-
   <div class="love-message">Te amo Muchisimo ❤️</div>
-
   <div class="pixel-character">
     <div class="pixel-head">
       <img src="your_face.png" alt="Your face" class="face-image" id="faceImage">
     </div>
-
     <div class="pixel-arms">
       <div class="arm left-arm"></div>
       <div class="arm right-arm"></div>
     </div>
-
     <div class="pixel-body"></div>
-
     <div class="pixel-legs">
       <div class="leg"></div>
       <div class="leg"></div>
     </div>
   </div>
-
   <div class="subtitle">Te amo Te amo Te amo Te amo y TE AMO Andrea</div>
-
-  <script>
-    // Create floating hearts
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.className = 'heart';
-      heart.innerHTML = '❤️';
-      heart.style.left = Math.random() * 100 + '%';
-      heart.style.animationDelay = Math.random() * 2 + 's';
-      heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
-      document.getElementById('hearts').appendChild(heart);
-      setTimeout(() => {
-        heart.remove();
-      }, 5000);
-    }
-    // Create hearts periodically
-    setInterval(createHeart, 1000);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
